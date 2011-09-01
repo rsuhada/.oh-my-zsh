@@ -6,6 +6,7 @@
 # general
 bindkey -me 2>/dev/null      # use emacs bindgs + meta
 bindkey '^O/' undo
+bindkey '\eh' backward-kill-word
 
 # my emacs motion
 bindkey '\ei' up-line-or-history
@@ -28,8 +29,8 @@ bindkey "^[OP" snippet_for
 # f2
 function snippet_sed()
 {
-    LBUFFER+="sed '"
-    RBUFFER="///g' $RBUFFER"
+    LBUFFER+="sed 's/"
+    RBUFFER="//g' $RBUFFER"
 }
 zle -N snippet_sed snippet_sed
 bindkey "^[OQ" snippet_sed
