@@ -2,11 +2,11 @@
 # taken from bash, needs cleanup but works
 
 # Search Path additions
-export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:$PATH
+export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:$PATH
 #    export PATH="$HOME/bin:/opt/local/bin:$PATH"
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
 DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
-export CVSROOT=":pserver:rsuhada@moon.usm.lmu.de:/home/moon/spt/cvs"
+export CVSROOT=":pserver:rs@moon.usm.lmu.de:/home/moon/spt/cvs"
 # Source shortcut
 alias sourcebash='source ~/.bashrc'
 alias sourcezsh='source ~/.zshrc'
@@ -32,29 +32,32 @@ alias lrt='ls -lrth'
 # alias cdsw='cd ~/data1/sw/ ; ls -l'
 # alias cdsd='cd ~/data1/sandbox/ ; ls -l'
 # alias cdpy='cd /Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages/'
-# alias cdt='cd /Users/rsuhada/Dropbox/thesis/'
+# alias cdt='cd /Users/rs/Dropbox/thesis/'
 # alias cd.='cd ../'
 # alias cd..='cd ../../'
 # alias cd...='cd ../../../'
 # alias cd....='cd ../../../../'
 # alias cd.....='cd ../../../../../'
 # alias cdb='cd ${OLDPWD}'
-# alias cdbx='cd /Users/rsuhada/Dropbox/'
+# alias cdbx='cd /Users/rs/Dropbox/'
 
+export CDPATH=.:~/:..:../..:~/w/:~/data1/:~/data1/lab/:~/pw
 alias c='cd'
 alias c1='cd ~/data1 ; ls -l'
+alias cw='cd ~/w ; ls -l'
+alias cpw='cd ~/pw ; ls -l'
 alias csz='cd ~/data1/APEX/ ; ls -l'
 alias csw='cd ~/data1/sw/ ; ls -l'
 alias csd='cd ~/data1/sandbox/ ; ls -l'
 alias cpy='cd /Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages/'
-alias ct='cd /Users/rsuhada/Dropbox/thesis/'
+alias ct='cd /Users/rs/Dropbox/thesis/'
 alias c.='cd ../'
 alias c..='cd ../../'
 alias c...='cd ../../../'
 alias c....='cd ../../../../'
 alias c.....='cd ../../../../../'
 alias cb='cd ${OLDPWD}'
-alias cbx='cd /Users/rsuhada/Dropbox/'
+alias cbx='cd /Users/rs/Dropbox/'
 
 # bash mods
 alias duh='du -sh'
@@ -87,28 +90,11 @@ alias tdate='date +"%y%m%d"'
 
 # XMM pipeline shortcut
 #alias xmm_pipeline='~/data1/SW/XMM/pipeline_hxb_dst01.sh'        # single ODF reduction
-alias dcp='~/data1/sw/Red_Pipe/dcp_pipeline.sh'    # batch DCP specific reduction
-alias blackcp='~/data1/sw/Black_Pipe/dcp_pipeline.sh'    # experimental DCP modifications
-
-# SAS 8.0.0
-alias sas80='source ~/data1/sw/sas-8.0.1/xmmsas_20080701_1803/setsas.sh; export SAS_MEMORY_MODEL=high; export SAS_CCF=/xmm/ccf/public_ccf.cif; export SAS_CCFPATH=/xmm/ccf/public; export SAS_IMAGEVIEWER=ds9'
-
-# SAS 10.0.0
-alias sas10='source ~/data1/sw/sas.10.0.0/xmmsas_20100423_1803/setsas.sh; export SAS_MEMORY_MODEL=high; export SAS_CCFPATH=/xmm/ccf/; export SAS_IMAGEVIEWER=ds9'
-
+# alias dcp='~/data1/sw/Red_Pipe/dcp_pipeline.sh'    # batch DCP specific reduction
+# alias blackcp='~/data1/sw/Black_Pipe/dcp_pipeline.sh'    # experimental DCP modifications
 
 # SAS 11.0.0
-alias sas11='source ~/data1/sw/sas.11.0.0/xmmsas_20110223_1803/setsas.sh; export SAS_MEMORY_MODEL=high; export SAS_CCFPATH=/xmm/ccf/; export SAS_IMAGEVIEWER=ds9'
-
-
-# SAS 7.1.0
- alias sas71='source /utils/xmmsas-setup.sh 7.1.0; export SAS_MEMORY_MODEL=high; export SAS_CCF=/xmm/ccf/public_ccf.cif; export SAS_CCFPATH=/xmm/ccf/public; export SAS_IMAGEVIEWER=ds9'
-
-# SAS 6.5.0
-alias sas65='source /utils/xmmsas-setup.sh 6.5.0; export SAS_MEMORY_MODEL=high; export SAS_CCF=/xmm/ccf/public_ccf.cif; export SAS_CCFPATH=/xmm/ccf/public; export SAS_IMAGEVIEWER=ds9'
-
-# old SAS version 6.1.0
-alias sas610='source /utils/xmmsas-setup.sh 6.1.0; export SAS_MEMORY_MODEL=high; export SAS_CCF=/xmm/ccf/public_ccf.cif; export SAS_CCFPATH=/xmm/ccf/public; export SAS_IMAGEVIEWER=ds9'
+alias sas11='export SAS_DIR=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; export SAS_PATH=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; source /Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803/sas-setup.sh; export SAS_MEMORY_MODEL=high; export SAS_CCFPATH=/Users/rs/calib/xmm/ccf/; export SAS_IMAGEVIEWER=ds9'
 
 # CIAO
 alias ciao='source /usr/ciao-4.2/bin/ciao.bash'
@@ -131,15 +117,17 @@ alias pdftotext='pdftotext -enc UTF-8'
 
 
 # python
-export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rsuhada/.emacs.d/plugins/ropemacs/:/Users/rsuhada/data1/sw/Pymacs/
+export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
 export NUMERIX=numpy
-export FISHERPATH=/Users/rsuhada/data1/sw/pythonlibs/Fisher
-export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rsuhada/data1/sw/pythonlibs/rs
+export FISHERPATH=/Users/rs/data1/sw/pythonlibs/Fisher
+export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rs/data1/sw/pythonlibs/rs
 
 #HEADAS-XSPEC
-HEADAS="/Users/rsuhada/data1/sw/heasoft-6.8/i386-apple-darwin10.2.0/"
+HEADAS="/Users/rs/data1/sw/heasoft-6.11/i386-apple-darwin10.7.0/"
 export HEADAS
 alias heainit=". $HEADAS/headas-init.sh"
+
+
 
 #    alias ds9new='/data1/rfassben/SW/Shareware/ds9'
 #    alias ds10='/data1/rfassben/SW/Shareware/ds9'
@@ -188,8 +176,6 @@ export SDSSIDL_DLM_DIR=${SDSSIDL_DIR}/src/DLM
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 
-
-#export FVTMP=/tmp/rsuhada
 
 # VO
 alias tpc='java -jar /Applications/topcat-full.jar'
