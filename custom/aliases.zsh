@@ -2,15 +2,16 @@
 # taken from bash, needs cleanup but works
 
 # Search Path additions
-export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:$PATH
+export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:$PATH
 #    export PATH="$HOME/bin:/opt/local/bin:$PATH"
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
 DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
-export CVSROOT=":pserver:rs@moon.usm.lmu.de:/home/moon/spt/cvs"
+export CVSROOT=":pserver:rsuhada@moon.usm.lmu.de:/home/moon/spt/cvs"
 # Source shortcut
 alias sourcebash='source ~/.bashrc'
 alias sourcezsh='source ~/.zshrc'
-export EDITOR="/usr/bin/emacsclient"
+# export EDITOR="/usr/bin/emacsclient"
+export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 
 # Remote copy dir from 023 to dst01
 #alias cp_o23='scp -r 'o23:~/data1/Export_dst01/*' ~/data1/Import_o23/'
@@ -24,6 +25,7 @@ alias lA='ls -lhA'
 alias ld='ls -F | grep "/"'
 alias lld='ls -lF | grep "/"'
 alias lrt='ls -lrth'
+alias l1='ls -1'
 
 # Shortcuts
 # export CDPATH=.:~/:..:../..:~/data1/
@@ -49,7 +51,7 @@ alias cpw='cd ~/pw ; ls -l'
 alias csz='cd ~/data1/APEX/ ; ls -l'
 alias csw='cd ~/data1/sw/ ; ls -l'
 alias csd='cd ~/data1/sandbox/ ; ls -l'
-alias cpy='cd /Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages/'
+alias cpy='cd /usr/local/lib/python2.6/site-packages'
 alias ct='cd /Users/rs/Dropbox/thesis/'
 alias c.='cd ../'
 alias c..='cd ../../'
@@ -117,17 +119,16 @@ alias pdftotext='pdftotext -enc UTF-8'
 
 
 # python
-export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
+# export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
+export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/
 export NUMERIX=numpy
-export FISHERPATH=/Users/rs/data1/sw/pythonlibs/Fisher
-export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rs/data1/sw/pythonlibs/rs
+# export FISHERPATH=/Users/rs/data1/sw/pythonlibs/Fisher
+# export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rs/data1/sw/pythonlibs/rs
 
 #HEADAS-XSPEC
 HEADAS="/Users/rs/data1/sw/heasoft-6.11/i386-apple-darwin10.7.0/"
 export HEADAS
 alias heainit=". $HEADAS/headas-init.sh"
-
-
 
 #    alias ds9new='/data1/rfassben/SW/Shareware/ds9'
 #    alias ds10='/data1/rfassben/SW/Shareware/ds9'
@@ -178,9 +179,14 @@ export HISTSIZE=10000
 
 
 # VO
-alias tpc='java -jar /Applications/topcat-full.jar'
-alias tpca='java -jar /Applications/topcat-full.jar -ascii'
-alias stl='java -jar /Applications/stilts.jar'
+alias tpc='java -jar ~/data1/sw/topcat-3.8/topcat-full.jar'
+alias tpca='java -jar ~/data1/sw/topcat-3.8/topcat-full.jar -f ascii'
+alias stilts='java -jar ~/data1/sw/stilts-2.3.1/stilts.jar'
+alias stl='java -jar ~/data1/sw/stilts-2.3.1/stilts.jar'
+
+# other java stuff
+alias lang='java -jar ~/data1/sw/languagetool-1.5/LanguageTool.jar'
+
 
 # alias tpc='~/data1/sw/tpc/bin/topcat'
 # alias tpca='~/data1/sw/tpc/bin/topcat -ascii'
@@ -193,5 +199,9 @@ alias stl='java -jar /Applications/stilts.jar'
 # export LS_COLORS='di=38;5;108:fi=00:*svn-commit.tmp=31:ln=38;5;116:ex=38;5;186'
 
 # alias emacs='/Applications/Aquamacs.app/Contents/MacOS/Aquamacs'
-alias e='/usr/bin/emacsclient -nw'
-alias ew='/usr/bin/emacsclient'
+alias e='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nw'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -nw'
+alias ew='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+
+# fink setup
+test -r /sw/bin/init.sh && . /sw/bin/init.sh

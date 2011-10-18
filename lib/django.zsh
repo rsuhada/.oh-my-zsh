@@ -17,7 +17,7 @@ alias pmml='python manage.py migrate --list'
 alias pmmf='python manage.py migrate --fake'
 alias pmcats='python manage.py convert_to_south'
 
-alias gs='gunicorn_django'
+# alias gs='gunicorn_django'
 alias gk='kill `cat .gunicorn.pid`'
 alias gl='tail -f .gunicorn.log'
 

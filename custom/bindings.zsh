@@ -83,4 +83,4 @@ insert_et () {
 LBUFFER+="2>&1 | tee "
 }
 zle -N insert-et insert_et
-bindkey "^[t" insert-et
+bindkey "^[OS" insert-et
