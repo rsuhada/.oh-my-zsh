@@ -2,11 +2,9 @@
 # taken from bash, needs cleanup but works
 
 # Search Path additions
-export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:$PATH
-#    export PATH="$HOME/bin:/opt/local/bin:$PATH"
+export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:$PATH
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
 DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
-export CVSROOT=":pserver:rsuhada@moon.usm.lmu.de:/home/moon/spt/cvs"
 # Source shortcut
 alias sourcebash='source ~/.bashrc'
 alias sourcezsh='source ~/.zshrc'
@@ -117,10 +115,12 @@ alias ip='ipython'
 alias latex='/usr/texbin/latex -interaction=nonstopmode'
 alias pdftotext='pdftotext -enc UTF-8'
 
+# CVS stuff
+source /Users/rs/.private-shell-configs/cvs-setup.sh
 
 # python
 # export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
-export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/
+export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi
 export NUMERIX=numpy
 # export FISHERPATH=/Users/rs/data1/sw/pythonlibs/Fisher
 # export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rs/data1/sw/pythonlibs/rs

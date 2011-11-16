@@ -52,6 +52,28 @@ zle -N snippet_sed snippet_sed
 bindkey "^[OR" snippet_sed
 
 
+# f4
+
+insert_et () {
+LBUFFER+="2>&1 | tee "
+}
+zle -N insert-et insert_et
+bindkey "^[OS" insert-et
+
+
+# f12: ^[[24~
+
+# f8
+
+function snippet_hist_arg()
+{
+    LBUFFER+=" !-1:"
+    RBUFFER=" $RBUFFER"
+}
+zle -N snippet_hist_arg snippet_hist_arg
+bindkey "^[[19~" snippet_hist_arg
+
+
 ######################################################################
 # misc functions
 
@@ -76,11 +98,3 @@ zle -N insert-echo insert_echo
 bindkey "^[e" insert-echo
 
 
-######################################################################
-# error to tee
-
-insert_et () {
-LBUFFER+="2>&1 | tee "
-}
-zle -N insert-et insert_et
-bindkey "^[OS" insert-et
