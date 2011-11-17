@@ -100,11 +100,6 @@ alias sas11='export SAS_DIR=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; 
 alias ciao='source /usr/ciao-4.2/bin/ciao.bash'
 
 # Software aliases
-alias sex='/utils/sextractor-2.5.0/src/sex'
-alias fims1='export HOST=$HOSTNAME ; ~/data1/sw/fimsP80/bin/fims.sh 1'
-alias fims2='export HOST=$HOSTNAME ; ~/data1/sw/fimsP80/bin/fims.sh 2'
-alias p2pp='/utils/p2pp/bin/p2pp'
-alias skycat='/utils/skycat/skycat'
 alias ds9='/Applications/SAOImage\ DS9.app/Contents/MacOS/ds9'
 alias na='nano'
 alias le='less'
@@ -114,9 +109,6 @@ alias py='python'
 alias ip='ipython'
 alias latex='/usr/texbin/latex -interaction=nonstopmode'
 alias pdftotext='pdftotext -enc UTF-8'
-
-# CVS stuff
-source /Users/rs/.private-shell-configs/cvs-setup.sh
 
 # python
 # export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
@@ -205,3 +197,13 @@ alias ew='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 
 # fink setup
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
+
+
+######################################################################
+# private stuff
+
+# CVS stuff
+source /Users/rs/.private-shell-configs/cvs-setup.sh
+
+# ssh
+source /Users/rs/.private-shell-configs/ssh-logins.sh
