@@ -15,7 +15,7 @@ export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 #alias cp_o23='scp -r 'o23:~/data1/Export_dst01/*' ~/data1/Import_o23/'
 
 #More Listing options
-alias ls='ls -G --color=auto'
+alias ls='ls -G'                # for unix might need: --color=auto
 alias l='ls'
 alias la='ls -la'
 alias ll='ls -lh'

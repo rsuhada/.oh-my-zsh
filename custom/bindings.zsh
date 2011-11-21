@@ -45,11 +45,29 @@ bindkey "^[OQ" snippet_awk
 
 function snippet_sed()
 {
-    LBUFFER+="sed 's/"
+    LBUFFER+="'s/"
     RBUFFER="//g' $RBUFFER"
 }
 zle -N snippet_sed snippet_sed
 bindkey "^[OR" snippet_sed
+
+
+# f5
+
+insert_rgrep () {
+LBUFFER+="grep -ri \""
+RBUFFER+="\" ./"
+}
+zle -N insert-rgrep insert_rgrep
+bindkey "^[[15~" insert-rgrep
+
+# f5
+
+insert_find () {
+LBUFFER+="find . -name \\*"
+}
+zle -N insert-find insert_find
+bindkey "^[[17~" insert-find
 
 
 # f4
@@ -59,6 +77,7 @@ LBUFFER+="2>&1 | tee "
 }
 zle -N insert-et insert_et
 bindkey "^[OS" insert-et
+
 
 
 # f12: ^[[24~
@@ -96,5 +115,35 @@ LBUFFER+="echo "
 }
 zle -N insert-echo insert_echo
 bindkey "^[e" insert-echo
+
+######################################################################
+# grep
+
+insert_grep () {
+LBUFFER+="grep "
+}
+zle -N insert-grep insert_grep
+bindkey "^[g" insert-grep
+
+######################################################################
+# mkdir
+
+insert_mkdir () {
+LBUFFER+="mkdir -p "
+}
+zle -N insert-mkdir insert_mkdir
+bindkey "^[m" insert-mkdir
+
+######################################################################
+# open
+
+insert_open () {
+LBUFFER+="open "
+}
+zle -N insert-open insert_open
+bindkey "^[o" insert-open
+
+
+
 
 
