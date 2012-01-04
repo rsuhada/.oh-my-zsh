@@ -55,7 +55,7 @@ bindkey "^[OR" snippet_sed
 # f5
 
 insert_rgrep () {
-LBUFFER+="grep -ri \""
+LBUFFER+="grep -riI \""
 RBUFFER+="\" ./"
 }
 zle -N insert-rgrep insert_rgrep
@@ -79,9 +79,6 @@ zle -N insert-et insert_et
 bindkey "^[OS" insert-et
 
 
-
-# f12: ^[[24~
-
 # f8
 
 function snippet_hist_arg()
@@ -91,6 +88,18 @@ function snippet_hist_arg()
 }
 zle -N snippet_hist_arg snippet_hist_arg
 bindkey "^[[19~" snippet_hist_arg
+
+
+# f9
+
+insert_et () {
+LBUFFER+="*.* "
+}
+zle -N insert-et insert_et
+bindkey "^[[20~" insert-et
+
+
+# f12: ^[[24~
 
 
 ######################################################################
@@ -121,6 +130,7 @@ bindkey "^[e" insert-echo
 
 insert_grep () {
 LBUFFER+="grep "
+RBUFFER+=" *."
 }
 zle -N insert-grep insert_grep
 bindkey "^[g" insert-grep
@@ -144,6 +154,21 @@ zle -N insert-open insert_open
 bindkey "^[o" insert-open
 
 
+######################################################################
+# rsync
+
+insert_rsync () {
+LBUFFER+="rsync -av "
+RBUFFER+=" rsuhada@desproc1:"
+}
+zle -N insert-rsync insert_rsync
+bindkey "^[r" insert-rsync
 
 
+# insert_rsync () {
+# LBUFFER+="rsync -av "
+# RBUFFER+=" rs@lap120.usm.uni-muenchen.de:"
+# }
+# zle -N insert-rsync insert_rsync
+# bindkey "^[r" insert-rsync
 

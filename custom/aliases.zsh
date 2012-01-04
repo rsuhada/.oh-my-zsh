@@ -2,9 +2,10 @@
 # taken from bash, needs cleanup but works
 
 # Search Path additions
-export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:$PATH
+export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:$PATH
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
 DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
+export LD_LIBRARY_PATH=/Users/rs/data1/sw/minuit2/lib:${LD_LIBRARY_PATH}
 # Source shortcut
 alias sourcebash='source ~/.bashrc'
 alias sourcezsh='source ~/.zshrc'
@@ -103,7 +104,7 @@ alias ciao='source /usr/ciao-4.2/bin/ciao.bash'
 alias ds9='/Applications/SAOImage\ DS9.app/Contents/MacOS/ds9'
 alias na='nano'
 alias le='less'
-alias calc='~/data1/sw/calc/calc-src.txt'
+alias calc='~/data1/sw/calc/calc.pl'
 alias je='~/bin/jedit'
 alias py='python'
 alias ip='ipython'
@@ -167,7 +168,7 @@ export SDSSIDL_DLM_DIR=${SDSSIDL_DIR}/src/DLM
 
 #RS .bash_history settings
 export HISTCONTROL=ignoreboth
-export HISTSIZE=10000
+export HISTSIZE=50000
 
 
 # VO
@@ -207,3 +208,9 @@ source /Users/rs/.private-shell-configs/cvs-setup.sh
 
 # ssh
 source /Users/rs/.private-shell-configs/ssh-logins.sh
+
+######################################################################
+# minuit package
+
+export DYLD_LIBRARY_PATH=/Users/rs/data1/sw/Minuit-1_7_9/src/.libs:$DY_LIBRARY_PATH
+export PYTHONPATH=/Users/rs/data1/sw/pyminuit/build/lib.macosx-10.6-universal-2.6:$PYTHONPATH
