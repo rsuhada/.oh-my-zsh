@@ -12,9 +12,6 @@ alias sourcezsh='source ~/.zshrc'
 # export EDITOR="/usr/bin/emacsclient"
 export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 
-# Remote copy dir from 023 to dst01
-#alias cp_o23='scp -r 'o23:~/data1/Export_dst01/*' ~/data1/Import_o23/'
-
 #More Listing options
 alias ls='ls -G'                # for unix might need: --color=auto
 alias l='ls'
@@ -25,22 +22,6 @@ alias ld='ls -F | grep "/"'
 alias lld='ls -lF | grep "/"'
 alias lrt='ls -lrth'
 alias l1='ls -1'
-
-# Shortcuts
-# export CDPATH=.:~/:..:../..:~/data1/
-# alias cd1='cd ~/data1 ; ls -l'
-# alias cdsz='cd ~/data1/APEX/ ; ls -l'
-# alias cdsw='cd ~/data1/sw/ ; ls -l'
-# alias cdsd='cd ~/data1/sandbox/ ; ls -l'
-# alias cdpy='cd /Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/site-packages/'
-# alias cdt='cd /Users/rs/Dropbox/thesis/'
-# alias cd.='cd ../'
-# alias cd..='cd ../../'
-# alias cd...='cd ../../../'
-# alias cd....='cd ../../../../'
-# alias cd.....='cd ../../../../../'
-# alias cdb='cd ${OLDPWD}'
-# alias cdbx='cd /Users/rs/Dropbox/'
 
 export CDPATH=.:~/:..:../..:~/w/:~/data1/:~/data1/lab/:~/pw
 alias c='cd'
@@ -89,11 +70,6 @@ alias a2ps_1='a2ps -l120 --columns=1'
 # bash mods
 alias tdate='date +"%y%m%d"'
 
-# XMM pipeline shortcut
-#alias xmm_pipeline='~/data1/SW/XMM/pipeline_hxb_dst01.sh'        # single ODF reduction
-# alias dcp='~/data1/sw/Red_Pipe/dcp_pipeline.sh'    # batch DCP specific reduction
-# alias blackcp='~/data1/sw/Black_Pipe/dcp_pipeline.sh'    # experimental DCP modifications
-
 # SAS 11.0.0
 alias sas11='export SAS_DIR=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; export SAS_PATH=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; source /Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803/sas-setup.sh; export SAS_MEMORY_MODEL=high; export SAS_CCFPATH=/Users/rs/calib/xmm/ccf/; export SAS_IMAGEVIEWER=ds9'
 
@@ -122,20 +98,6 @@ export NUMERIX=numpy
 HEADAS="/Users/rs/data1/sw/heasoft-6.11/i386-apple-darwin10.7.0/"
 export HEADAS
 alias heainit=". $HEADAS/headas-init.sh"
-
-#    alias ds9new='/data1/rfassben/SW/Shareware/ds9'
-#    alias ds10='/data1/rfassben/SW/Shareware/ds9'
-#    alias ds11='/data1/rfassben/SW/shell/load_cuts.sh'
-#    alias dsRGB='/data1/rfassben/SW/shell/load_RGB.sh'
-#    alias imwcs='/data1/rfassben/SW/Shareware/wcstools-3.6.5/bin/imwcs'
-#    alias swarp='/data1/rfassben/SW/Shareware/SWARP/bin/swarp'
-#    alias ispiwcs='/data1/rfassben/SW/O2K/ISPI/ispiwcs.sh'
-#    alias copywcs='/data1/rfassben/SW/O2K/ISPI/copy_wcs.sh'
-#    alias ispiphot='/data1/rfassben/SW/O2K/ISPI/ispi_phot.sh'
-#    alias o2kphot='/data1/rfassben/SW/O2K/o2k_util_MPE/scripts/o2k_phot.sh'
-#    alias o2kwcs='/data1/rfassben/SW/O2K/o2k_util_MPE/scripts/o2kwcs.sh'
-#    alias copyo2kwcs='/data1/rfassben/SW/O2K/o2k_util_MPE/scripts/copy_o2kwcs.sh'
-
 
 #My init
 #    source /utils/exsas-setup.sh    # should include MIDAS definitions

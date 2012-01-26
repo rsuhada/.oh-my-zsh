@@ -61,7 +61,7 @@ RBUFFER+="\" ./"
 zle -N insert-rgrep insert_rgrep
 bindkey "^[[15~" insert-rgrep
 
-# f5
+# f6
 
 insert_find () {
 LBUFFER+="find . -name \\*"
@@ -89,17 +89,19 @@ function snippet_hist_arg()
 zle -N snippet_hist_arg snippet_hist_arg
 bindkey "^[[19~" snippet_hist_arg
 
-
 # f9
-
-insert_et () {
-LBUFFER+="*.* "
+insert_wildc () {
+LBUFFER+="*.*"
 }
-zle -N insert-et insert_et
-bindkey "^[[20~" insert-et
+zle -N insert-wildc insert_wildc
+bindkey "^[[20~" insert-wildc
 
-
-# f12: ^[[24~
+# f12
+insert_recentfile () {
+LBUFFER+=" `ls -rt -1 | tail -1`"
+}
+zle -N insert-recentfile insert_recentfile
+bindkey "^[[24~" insert-recentfile
 
 
 ######################################################################
@@ -153,6 +155,23 @@ LBUFFER+="open "
 zle -N insert-open insert_open
 bindkey "^[o" insert-open
 
+######################################################################
+# lrt
+
+# for shell function:
+# > function foo () {
+# >
+# > echo "Foo ooo"
+# > }
+#
+# bindkey -s '<keystroke>' '^qfoo\n'
+#
+# This assumes ^q is bound to the editor command push-line.  You can
+# remove the ^q if you only want to use this on an empty command line.
+
+bindkey -s "^[i" "^qls -lrth\n"
+bindkey -s "^[I" "^qls -lrtha\n"
+
 
 ######################################################################
 # rsync
@@ -171,4 +190,5 @@ bindkey "^[r" insert-rsync
 # }
 # zle -N insert-rsync insert_rsync
 # bindkey "^[r" insert-rsync
+
 
