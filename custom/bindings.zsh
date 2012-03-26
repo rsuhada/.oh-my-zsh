@@ -91,7 +91,8 @@ bindkey "^[[19~" snippet_hist_arg
 
 # f9
 insert_wildc () {
-LBUFFER+="*.*"
+LBUFFER+="*"
+RBUFFER=".* $RBUFFER"
 }
 zle -N insert-wildc insert_wildc
 bindkey "^[[20~" insert-wildc
@@ -171,7 +172,9 @@ bindkey "^[o" insert-open
 
 bindkey -s "^[i" "^qls -lrth\n"
 bindkey -s "^[I" "^qls -lrtha\n"
-
+bindkey -s "^[k" "^qls -a\n"
+bindkey -s "^[h" "^qcd ..\n"
+bindkey -s "^[;" "^qcd -\n"
 
 ######################################################################
 # rsync

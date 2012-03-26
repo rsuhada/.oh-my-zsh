@@ -38,7 +38,8 @@ alias c..='cd ../../'
 alias c...='cd ../../../'
 alias c....='cd ../../../../'
 alias c.....='cd ../../../../../'
-alias cb='cd ${OLDPWD}'
+alias cb='cd -'
+alias cbb='cd --'
 alias cbx='cd /Users/rs/Dropbox/'
 
 # bash mods
