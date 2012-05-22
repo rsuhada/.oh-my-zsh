@@ -2,7 +2,7 @@
 # taken from bash, needs cleanup but works
 
 # Search Path additions
-export PATH=/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:$PATH
+export PATH=~/bin:/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:$PATH
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
 DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
 export LD_LIBRARY_PATH=/Users/rs/data1/sw/minuit2/lib:${LD_LIBRARY_PATH}
@@ -33,6 +33,8 @@ alias csw='cd ~/data1/sw/ ; ls -l'
 alias csd='cd ~/data1/sandbox/ ; ls -l'
 alias cpy='cd /usr/local/lib/python2.6/site-packages'
 alias ct='cd /Users/rs/Dropbox/thesis/'
+alias cdl='cd ~/Downloads'
+alias cspt='cd ~/w/xspt/data'
 alias c.='cd ../'
 alias c..='cd ../../'
 alias c...='cd ../../../'
@@ -90,7 +92,7 @@ alias pdftotext='pdftotext -enc UTF-8'
 
 # python
 # export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
-export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi
+export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi:/Users/rs/data1/sw/esaspi/py/:
 export NUMERIX=numpy
 # export FISHERPATH=/Users/rs/data1/sw/pythonlibs/Fisher
 # export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rs/data1/sw/pythonlibs/rs
@@ -177,3 +179,22 @@ source /Users/rs/.private-shell-configs/ssh-logins.sh
 
 export DYLD_LIBRARY_PATH=/Users/rs/data1/sw/Minuit-1_7_9/src/.libs:$DY_LIBRARY_PATH
 export PYTHONPATH=/Users/rs/data1/sw/pyminuit/build/lib.macosx-10.6-universal-2.6:$PYTHONPATH
+
+######################################################################
+# tmux stuff
+
+# run daemon for clipboard integration
+alias tmux='/Users/rs/bin/clipb & ; tmux'
+
+# autocomplete
+compctl -g '~/.teamocil/*(:t:r)' teamocil
+
+# ######################################################################
+# # logging - not working for
+# promptFunc()
+# {
+#     # right before prompting for the next command, save the previous
+#     # command in a file.
+#     echo "$(date +%Y-%m-%d--%H-%M-%S) $(hostname) $PWD $(history 1)" >> ~/Dropbox/dotfiles/.zsh_full_history
+# }
+# PROMPT_COMMAND=promptFunc

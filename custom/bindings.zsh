@@ -20,7 +20,6 @@ bindkey '\el' forward-char
 # function keys
 
 # f1
-
 function snippet_for()
 {
     LBUFFER+="for i in "
@@ -31,7 +30,6 @@ bindkey "^[OP" snippet_for
 
 
 # f2
-
 function snippet_awk()
 {
     LBUFFER+="awk '{print \$1"
@@ -42,7 +40,6 @@ bindkey "^[OQ" snippet_awk
 
 
 # f3
-
 function snippet_sed()
 {
     LBUFFER+="'s/"
@@ -53,7 +50,6 @@ bindkey "^[OR" snippet_sed
 
 
 # f5
-
 insert_rgrep () {
 LBUFFER+="grep -riI \""
 RBUFFER+="\" ./"
@@ -62,7 +58,6 @@ zle -N insert-rgrep insert_rgrep
 bindkey "^[[15~" insert-rgrep
 
 # f6
-
 insert_find () {
 LBUFFER+="find . -name \\*"
 }
@@ -71,7 +66,6 @@ bindkey "^[[17~" insert-find
 
 
 # f4
-
 insert_et () {
 LBUFFER+="2>&1 | tee "
 }
@@ -79,8 +73,15 @@ zle -N insert-et insert_et
 bindkey "^[OS" insert-et
 
 
-# f8
+# f7
+insert_ds9_reg () {
+LBUFFER+="-regions load "
+}
+zle -N insert-ds9_reg insert_ds9_reg
+bindkey "^[[18~" insert-ds9_reg
 
+
+# f8
 function snippet_hist_arg()
 {
     LBUFFER+=" !-1:"
@@ -92,18 +93,12 @@ bindkey "^[[19~" snippet_hist_arg
 # f9
 insert_wildc () {
 LBUFFER+="*"
-RBUFFER=".* $RBUFFER"
+RBUFFER="* $RBUFFER"
 }
 zle -N insert-wildc insert_wildc
 bindkey "^[[20~" insert-wildc
 
 # f12
-insert_recentfile () {
-LBUFFER+=" `ls -rt -1 | tail -1`"
-}
-zle -N insert-recentfile insert_recentfile
-bindkey "^[[24~" insert-recentfile
-
 
 ######################################################################
 # misc functions
@@ -173,8 +168,9 @@ bindkey "^[o" insert-open
 bindkey -s "^[i" "^qls -lrth\n"
 bindkey -s "^[I" "^qls -lrtha\n"
 bindkey -s "^[k" "^qls -a\n"
-bindkey -s "^[h" "^qcd ..\n"
-bindkey -s "^[;" "^qcd -\n"
+bindkey -s "^[," "^qcd ..\n"
+bindkey -s "^[." "^qcd -\n"
+# bindkey -s "^[;" "^qcd -\n"
 
 ######################################################################
 # rsync
