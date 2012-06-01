@@ -66,6 +66,9 @@ alias gpush='git push -u origin master'
 # # sh options
 # shopt -s cdspell
 
+# calendar
+alias cal='gcal -q DE_BY -s Monday --date-format=de --type=special .'
+alias gcal='gcal -q DE_BY -s Monday --date-format=de --type=special .'
 
 # a2ps 1sided
 alias a2ps_1='a2ps -l120 --columns=1'

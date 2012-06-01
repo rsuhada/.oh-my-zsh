@@ -59,7 +59,8 @@ bindkey "^[[15~" insert-rgrep
 
 # f6
 insert_find () {
-LBUFFER+="find . -name \\*"
+LBUFFER+="find . -iname \\*"
+RBUFFER+="\\*"
 }
 zle -N insert-find insert_find
 bindkey "^[[17~" insert-find
@@ -80,25 +81,22 @@ LBUFFER+="-regions load "
 zle -N insert-ds9_reg insert_ds9_reg
 bindkey "^[[18~" insert-ds9_reg
 
-
 # f8
+insert_wildc () {
+LBUFFER+="*"
+RBUFFER="* $RBUFFER"
+}
+zle -N insert-wildc insert_wildc
+bindkey "^[[19~" insert-wildc
+
+# f9
 function snippet_hist_arg()
 {
     LBUFFER+=" !-1:"
     RBUFFER=" $RBUFFER"
 }
 zle -N snippet_hist_arg snippet_hist_arg
-bindkey "^[[19~" snippet_hist_arg
-
-# f9
-insert_wildc () {
-LBUFFER+="*"
-RBUFFER="* $RBUFFER"
-}
-zle -N insert-wildc insert_wildc
-bindkey "^[[20~" insert-wildc
-
-# f12
+bindkey "^[[20~" snippet_hist_arg
 
 ######################################################################
 # misc functions
@@ -170,9 +168,16 @@ bindkey -s "^[I" "^qls -lrtha\n"
 bindkey -s "^[k" "^qls -a\n"
 bindkey -s "^[," "^qcd ..\n"
 bindkey -s "^[." "^qcd -\n"
-# bindkey -s "^[;" "^qcd -\n"
+# bindkey -s "^[;" "^Qls -rt -1 | tail -1\n"
 
-######################################################################
+# insert most recent filename
+insert_recentfile () {
+LBUFFER+=" `ls -rt -1 | tail -1`"
+}
+zle -N insert-recentfile insert_recentfile
+bindkey "^[;" insert-recentfile
+
+#####################################################################
 # rsync
 
 insert_rsync () {

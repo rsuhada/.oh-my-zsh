@@ -9,3 +9,9 @@ export GREP_COLOR='1;4'        # good colors: 30 31 34 35 36, special:
 
 # TERM=xterm-256color
 
+
+# fixes the problem with tmux backspace when ss into linux
+case ${TERM} in
+  screen-256color) TERM=screen.xterm-xfree86
+  ;;
+esac
