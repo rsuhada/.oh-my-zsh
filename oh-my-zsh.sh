@@ -8,7 +8,7 @@ fpath=($ZSH/functions $ZSH/completions $fpath)
 for config_file ($ZSH/lib/*.zsh) source $config_file
 
 # Add all defined plugins to fpath
-plugin=${plugin:=()}
+plugin=${plugin:=(zsh-syntax-highlighting)}
 for plugin ($plugins) fpath=($ZSH/plugins/$plugin $fpath)
 
 # Load and run compinit
