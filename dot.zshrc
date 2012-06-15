@@ -7,6 +7,12 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 export ZSH_THEME="rs"
 
+# on remote machine
+# export ZSH_THEME="rs-remote"    # might need to add to aliases: alias
+#                                 # ls='ls -G --color=auto' # for unix
+#                                 # might need: --color=auto
+
+
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 

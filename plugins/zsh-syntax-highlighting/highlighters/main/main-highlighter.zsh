@@ -40,9 +40,9 @@
 : ${ZSH_HIGHLIGHT_STYLES[precommand]:=fg=yellow,underline}
 : ${ZSH_HIGHLIGHT_STYLES[commandseparator]:=none}
 : ${ZSH_HIGHLIGHT_STYLES[hashed-command]:=fg=yellow}
-: ${ZSH_HIGHLIGHT_STYLES[path]:=underline}
-: ${ZSH_HIGHLIGHT_STYLES[globbing]:=fg=blue}
-: ${ZSH_HIGHLIGHT_STYLES[history-expansion]:=fg=blue}
+: ${ZSH_HIGHLIGHT_STYLES[path]:=bold}
+: ${ZSH_HIGHLIGHT_STYLES[globbing]:=fg=green}
+: ${ZSH_HIGHLIGHT_STYLES[history-expansion]:=fg=green}
 : ${ZSH_HIGHLIGHT_STYLES[single-hyphen-option]:=none}
 : ${ZSH_HIGHLIGHT_STYLES[double-hyphen-option]:=none}
 : ${ZSH_HIGHLIGHT_STYLES[back-quoted-argument]:=none}
