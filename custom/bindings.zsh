@@ -168,7 +168,7 @@ bindkey -s "^[I" "^qls -lrtha\n"
 bindkey -s "^[k" "^qls -a\n"
 bindkey -s "^[," "^qcd ..\n"
 bindkey -s "^[." "^qcd -\n"
-bindkey -s "^[[24~" "pwd | pbcopy\n"
+bindkey -s "^[[24~" "pwd | perl -ne 'chomp and print' | pbcopy\n"
 # bindkey -s "^[;" "^Qls -rt -1 | tail -1\n"
 
 # insert most recent filename

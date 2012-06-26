@@ -13,7 +13,8 @@ alias sourcezsh='source ~/.zshrc'
 export EDITOR="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 
 #More Listing options
-alias ls='ls -G'                # for unix might need: --color=auto
+# alias ls='ls --color=auto'     # version: linux
+alias ls='ls -G'                # version: mac
 alias l='ls'
 alias la='ls -la'
 alias ll='ls -lh'
@@ -26,6 +27,7 @@ alias l1='ls -1'
 export CDPATH=.:~/:..:../..:~/w/:~/data1/:~/data1/lab/:~/pw
 alias c='cd'
 alias c1='cd ~/data1 ; ls -l'
+alias ce='cd ~/data1/sw/esaspi ; ls -l'
 alias cw='cd ~/w ; ls -l'
 alias cpw='cd ~/pw ; ls -l'
 alias csz='cd ~/data1/APEX/ ; ls -l'
@@ -62,6 +64,9 @@ alias ga='git add .'
 alias gst='git status'
 alias gc='git commit'
 alias gpush='git push -u origin master'
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias glg='git lg'
+alias glgp='git lg -p'
 
 # # sh options
 # shopt -s cdspell
@@ -86,7 +91,7 @@ alias ciao='source /usr/ciao-4.2/bin/ciao.bash'
 alias ds9='/Applications/SAOImage\ DS9.app/Contents/MacOS/ds9'
 alias na='nano'
 alias le='less'
-alias calc='~/data1/sw/calc/calc.pl'
+# alias calc='~/data1/sw/calc/calc.pl' # better put/link it in your path!
 alias je='~/bin/jedit'
 alias py='python'
 alias ip='ipython'
@@ -95,7 +100,7 @@ alias pdftotext='pdftotext -enc UTF-8'
 
 # python
 # export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
-export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi:/Users/rs/data1/sw/esaspi/py/:
+export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi:/Users/rs/data1/sw/esaspi/py/:/Users/rs/data1/sw/esaspi/sb/:
 export NUMERIX=numpy
 # export FISHERPATH=/Users/rs/data1/sw/pythonlibs/Fisher
 # export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rs/data1/sw/pythonlibs/rs
