@@ -68,6 +68,15 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 alias glg='git lg'
 alias glgp='git lg -p'
 
+# pipe tricks
+alias -g L='|less -R'
+alias -g M='|more'
+alias -g G='|grep'
+alias -g T='|tail'
+alias -g H='|head'
+alias -g W='|wc -l'
+alias -g S='|sort'
+
 # # sh options
 # shopt -s cdspell
 
@@ -94,7 +103,7 @@ alias le='less'
 # alias calc='~/data1/sw/calc/calc.pl' # better put/link it in your path!
 alias je='~/bin/jedit'
 alias py='python'
-alias ip='ipython'
+alias ip='ipython --pylab'
 alias latex='/usr/texbin/latex -interaction=nonstopmode'
 alias pdftotext='pdftotext -enc UTF-8'
 
