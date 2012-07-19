@@ -22,6 +22,11 @@ else
 fi
 
 # Apply theming defaults
+
+# my minimal prompt
+# PS1="%n@%m:%~%# "
+
+# minimal plus empty line
 PS1="%n@%m:%~%# "
 
 # git theming default: Variables for theming the git info prompt

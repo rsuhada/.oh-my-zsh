@@ -1,4 +1,4 @@
-# misc. settings
+
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 export GREP_COLOR='1;4'        # good colors: 30 31 34 35 36, special:
