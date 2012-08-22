@@ -48,6 +48,7 @@ alias cbx='cd /Users/rs/Dropbox/'
 
 # bash mods
 alias duh='du -sh'
+alias df='df -H'
 alias grep='grep --color'
 alias tdate='date +"%y%m%d"'
 alias tarx='tar -xvvf'
@@ -58,6 +59,8 @@ alias tgx='tar -xvvzf'
 alias tgc='tar -cvvzf'
 alias sourcebash='source ~/.bashrc'
 alias cx='chmod 744'
+alias diff='diff -u'            # unified format (git like)
+alias dyff='/usr/bin/diff -y -W 70'           # 2 column: reroot to executable to avoid alias colision
 
 # git
 alias ga='git add .'
@@ -106,6 +109,9 @@ alias py='python'
 alias ip='ipython --pylab'
 alias latex='/usr/texbin/latex -interaction=nonstopmode'
 alias pdftotext='pdftotext -enc UTF-8'
+
+alias diffpdf='/Applications/diffpdf.app/Contents/MacOS/diffpdf'
+alias kdiff3='/Applications/kdiff3.app/Contents/MacOS/kdiff3'
 
 # python
 # export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
@@ -204,7 +210,7 @@ export PYTHONPATH=/Users/rs/data1/sw/pyminuit/build/lib.macosx-10.6-universal-2.
 alias tmux='/Users/rs/bin/clipb & ; tmux'
 
 # autocomplete
-compctl -g '~/.teamocil/*(:t:r)' teamocil
+# compctl -g '~/.teamocil/*(:t:r)' teamocil
 
 # ######################################################################
 # # logging - not working for

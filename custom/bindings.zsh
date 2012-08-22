@@ -126,10 +126,20 @@ bindkey "^[e" insert-echo
 
 insert_grep () {
 LBUFFER+="grep "
-RBUFFER+=" *."
+# RBUFFER+=" *."
 }
 zle -N insert-grep insert_grep
 bindkey "^[g" insert-grep
+
+######################################################################
+# ack
+
+insert_ack () {
+LBUFFER+="ack "
+# RBUFFER+=" *."
+}
+zle -N insert-ack insert_ack
+bindkey "^[a" insert-ack
 
 ######################################################################
 # mkdir

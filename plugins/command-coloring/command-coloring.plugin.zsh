@@ -5,20 +5,20 @@
 
 # Token types styles.
 # See http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#SEC135
-ZLE_RESERVED_WORD_STYLE='fg=yellow,bold'
-ZLE_ALIAS_STYLE='fg=green,bold'
-ZLE_BUILTIN_STYLE='fg=green,bold'
-ZLE_FUNCTION_STYLE='fg=green,bold'
-ZLE_COMMAND_STYLE='fg=green,bold'
+ZLE_RESERVED_WORD_STYLE='fg=yellow,normal'
+ZLE_ALIAS_STYLE='fg=green,normal'
+ZLE_BUILTIN_STYLE='fg=green,normal'
+ZLE_FUNCTION_STYLE='fg=green,normal'
+ZLE_COMMAND_STYLE='fg=green,normal'
 ZLE_PATH_STYLE='fg=white,underline'
-ZLE_COMMAND_UNKNOWN_TOKEN_STYLE='fg=red,bold'
+ZLE_COMMAND_UNKNOWN_TOKEN_STYLE='fg=red,normal'
 
-ZLE_HYPHEN_CLI_OPTION='fg=yellow,bold'
-ZLE_DOUBLE_HYPHEN_CLI_OPTION='fg=yellow,bold'
-ZLE_SINGLE_QUOTED='fg=magenta,bold'
-ZLE_DOUBLE_QUOTED='fg=magenta,bold'
-ZLE_BACK_QUOTED='fg=cyan,bold'
-ZLE_GLOBING='fg=blue,bold'
+ZLE_HYPHEN_CLI_OPTION='fg=yellow,normal'
+ZLE_DOUBLE_HYPHEN_CLI_OPTION='fg=yellow,normal'
+ZLE_SINGLE_QUOTED='fg=magenta,normal'
+ZLE_DOUBLE_QUOTED='fg=magenta,normal'
+ZLE_BACK_QUOTED='fg=cyan,normal'
+ZLE_GLOBING='fg=blue,normal'
 
 ZLE_DEFAULT='fg=white,normal'
 
