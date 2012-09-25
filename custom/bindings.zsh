@@ -160,6 +160,16 @@ zle -N insert-open insert_open
 bindkey "^[o" insert-open
 
 ######################################################################
+# ds9
+
+insert_ds9 () {
+LBUFFER+="ds9 "
+RBUFFER+=" &"
+}
+zle -N insert-ds9 insert_ds9
+bindkey "^[9" insert-ds9
+
+######################################################################
 # lrt
 
 # for shell function:
@@ -178,6 +188,8 @@ bindkey -s "^[I" "^qls -lrtha\n"
 bindkey -s "^[k" "^qls -a\n"
 bindkey -s "^[," "^qcd ..\n"
 bindkey -s "^[." "^qcd -\n"
+
+# f12
 bindkey -s "^[[24~" "pwd | perl -ne 'chomp and print' | pbcopy\n"
 # bindkey -s "^[;" "^Qls -rt -1 | tail -1\n"
 

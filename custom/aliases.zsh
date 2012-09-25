@@ -61,6 +61,7 @@ alias sourcebash='source ~/.bashrc'
 alias cx='chmod 744'
 alias diff='diff -u'            # unified format (git like)
 alias dyff='/usr/bin/diff -y -W 70'           # 2 column: reroot to executable to avoid alias colision
+alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags' # use brewed version
 
 # git
 alias ga='git add .'
@@ -79,6 +80,7 @@ alias -g T='|tail'
 alias -g H='|head'
 alias -g W='|wc -l'
 alias -g S='|sort'
+alias -g C="|pbcopy"            # send to clipboard
 
 # # sh options
 # shopt -s cdspell
@@ -115,7 +117,7 @@ alias kdiff3='/Applications/kdiff3.app/Contents/MacOS/kdiff3'
 
 # python
 # export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
-export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi:/Users/rs/data1/sw/esaspi/py/:/Users/rs/data1/sw/esaspi/sb/:
+export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi:/Users/rs/data1/sw/esaspi/py/:/Users/rs/data1/sw/esaspi/sb/:/Users/rs/data1/sw/esaspi/py/test/:
 export NUMERIX=numpy
 # export FISHERPATH=/Users/rs/data1/sw/pythonlibs/Fisher
 # export PYTHONPATH=${PYTHONPATH}:${FISHERPATH}:/Users/rs/data1/sw/pythonlibs/rs

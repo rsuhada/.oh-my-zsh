@@ -13,3 +13,7 @@ case ${TERM} in
   screen-256color) TERM=screen.xterm-xfree86
   ;;
 esac
+
+
+# fast cd
+eval "$(fasd --init auto)"
