@@ -189,6 +189,11 @@ alias ew='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
 # fink setup
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
+######################################################################
+# fasd
+
+alias j='fasd_cd -d'     # cd, same functionality as j in autojump
+alias jj='fasd_cd -d -i' # cd with interactive selection
 
 ######################################################################
 # private stuff
@@ -204,6 +209,11 @@ source /Users/rs/.private-shell-configs/ssh-logins.sh
 
 export DYLD_LIBRARY_PATH=/Users/rs/data1/sw/Minuit-1_7_9/src/.libs:$DY_LIBRARY_PATH
 export PYTHONPATH=/Users/rs/data1/sw/pyminuit/build/lib.macosx-10.6-universal-2.6:$PYTHONPATH
+
+######################################################################
+# brew stuff
+
+alias youtube-dl='/usr/local/Cellar/youtube-dl/2012.02.27/bin/youtube-dl'
 
 ######################################################################
 # tmux stuff

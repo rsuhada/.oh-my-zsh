@@ -219,3 +219,19 @@ bindkey "^[r" insert-rsync
 # bindkey "^[r" insert-rsync
 
 
+######################################################################
+# fasd for quick access
+
+insert_fasd_file () {
+LBUFFER+="\`f "
+RBUFFER+=" \`"
+}
+zle -N insert-fasd_file insert_fasd_file
+bindkey "^[1" insert-fasd_file
+
+insert_fasd_dir () {
+LBUFFER+="\`d  "
+RBUFFER+=" \`"
+}
+zle -N insert-fasd_dir insert_fasd_file
+bindkey "^[2" insert-fasd_dir
