@@ -113,6 +113,15 @@ zle -N insert-sudo insert_sudo
 bindkey "^[s" insert-sudo
 
 ######################################################################
+# jump
+
+insert_jump () {
+LBUFFER+="j "
+}
+zle -N insert-jump insert_jump
+bindkey "^[n" insert-jump
+
+######################################################################
 # echo
 
 insert_echo () {
@@ -230,8 +239,8 @@ zle -N insert-fasd_file insert_fasd_file
 bindkey "^[1" insert-fasd_file
 
 insert_fasd_dir () {
-LBUFFER+="\`d  "
+LBUFFER+="\`d "
 RBUFFER+=" \`"
 }
-zle -N insert-fasd_dir insert_fasd_file
+zle -N insert-fasd_dir insert_fasd_dir
 bindkey "^[2" insert-fasd_dir

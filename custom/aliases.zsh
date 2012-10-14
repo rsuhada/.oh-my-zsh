@@ -4,6 +4,10 @@
 # Search Path additions
 export PATH=~/bin:/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:$PATH
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
+
+# for ports
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
 DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
 export LD_LIBRARY_PATH=/Users/rs/data1/sw/minuit2/lib:${LD_LIBRARY_PATH}
 # Source shortcut
@@ -111,6 +115,9 @@ alias py='python'
 alias ip='ipython --pylab'
 alias latex='/usr/texbin/latex -interaction=nonstopmode'
 alias pdftotext='pdftotext -enc UTF-8'
+
+alias py27='/opt/local/bin/python'
+alias ip27='/opt/local/bin/ipython-2.7'
 
 alias diffpdf='/Applications/diffpdf.app/Contents/MacOS/diffpdf'
 alias kdiff3='/Applications/kdiff3.app/Contents/MacOS/kdiff3'
@@ -233,3 +240,9 @@ alias tmux='/Users/rs/bin/clipb & ; tmux'
 #     echo "$(date +%Y-%m-%d--%H-%M-%S) $(hostname) $PWD $(history 1)" >> ~/Dropbox/dotfiles/.zsh_full_history
 # }
 # PROMPT_COMMAND=promptFunc
+
+
+######################################################################
+# QSTK stuff
+
+alias initquant='source /Users/rs/data1/sw/QSTK/localconfig.sh'
