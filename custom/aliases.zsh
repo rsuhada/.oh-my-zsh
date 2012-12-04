@@ -2,7 +2,7 @@
 # taken from bash, needs cleanup but works
 
 # Search Path additions
-export PATH=~/bin:/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:$PATH
+export PATH=~/bin:/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:/Users/rs/data1/sw/dataProductivityToolkit:$PATH
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
 
 # for ports
@@ -64,7 +64,7 @@ alias tgc='tar -cvvzf'
 alias sourcebash='source ~/.bashrc'
 alias cx='chmod 744'
 alias diff='diff -u'            # unified format (git like)
-alias dyff='/usr/bin/diff -y -W 70'           # 2 column: reroot to executable to avoid alias colision
+alias dyff='/usr/bin/diff -y -W 116'           # 2 column: reroot to executable to avoid alias colision, 116 - half big screem
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags' # use brewed version
 
 # git
@@ -246,3 +246,9 @@ alias tmux='/Users/rs/bin/clipb & ; tmux'
 # QSTK stuff
 
 alias initquant='source /Users/rs/data1/sw/QSTK/localconfig.sh'
+
+
+######################################################################
+# timing, cron, at
+
+alias clearatq='for i in `atq | cut -f1` ; do atrm $i; done'

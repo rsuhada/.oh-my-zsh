@@ -179,6 +179,17 @@ zle -N insert-ds9 insert_ds9
 bindkey "^[9" insert-ds9
 
 ######################################################################
+# underscore
+
+insert_underscore () {
+LBUFFER+="_"
+# RBUFFER+=" &"
+}
+zle -N insert-underscore insert_underscore
+bindkey "^[u" insert-underscore
+
+
+######################################################################
 # lrt
 
 # for shell function:
