@@ -131,6 +131,15 @@ zle -N insert-echo insert_echo
 bindkey "^[e" insert-echo
 
 ######################################################################
+# pparallel
+
+insert_pparallel () {
+LBUFFER+="pparallel "
+}
+zle -N insert-pparallel insert_pparallel
+bindkey "^[q" insert-pparallel
+
+######################################################################
 # grep
 
 insert_grep () {
