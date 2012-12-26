@@ -17,3 +17,11 @@ esac
 
 # fast cd
 eval "$(fasd --init auto)"
+
+# mega history
+function precmd() {
+    if [ "$(id -u)" -ne 0 ]; then
+        FULL_CMD_LOG="$HOME/.zshhist/zsh-history-$(date "+%Y-%m-%d").log"
+        echo "`pwd` [$(date)] `\history -1`" >> ${FULL_CMD_LOG}
+    fi
+}
