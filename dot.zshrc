@@ -27,8 +27,11 @@ export ZSH_THEME="rs"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting brew macports pip)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+zstyle ':completion:*' completer _expand _complete _files \
+        		_correct _approximate

@@ -131,6 +131,15 @@ zle -N insert-echo insert_echo
 bindkey "^[e" insert-echo
 
 ######################################################################
+# rsync
+
+insert_rsync_local () {
+LBUFFER+="rsync -a --stats --progress "
+}
+zle -N insert-rsync_local insert_rsync_local
+bindkey "^[c" insert-rsync_local
+
+######################################################################
 # pparallel
 
 insert_pparallel () {

@@ -115,6 +115,8 @@ alias py='python'
 alias ip='ipython --pylab'
 alias latex='/usr/texbin/latex -interaction=nonstopmode'
 alias pdftotext='pdftotext -enc UTF-8'
+alias rsync='rsync --stats --progress'
+alias rp='rsync --stats --progress'
 
 alias py27='/opt/local/bin/python'
 alias ip27='/opt/local/bin/ipython-2.7'
