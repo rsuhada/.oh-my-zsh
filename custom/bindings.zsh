@@ -206,7 +206,6 @@ LBUFFER+="_"
 zle -N insert-underscore insert_underscore
 bindkey "^[u" insert-underscore
 
-
 ######################################################################
 # lrt
 
@@ -273,3 +272,12 @@ RBUFFER+=" \`"
 }
 zle -N insert-fasd_dir insert_fasd_dir
 bindkey "^[2" insert-fasd_dir
+
+
+# f5
+insert_leo () {
+LBUFFER+="leo \""
+RBUFFER+="\" H"
+}
+zle -N insert-leo insert_leo
+bindkey "^[[21~" insert-leo

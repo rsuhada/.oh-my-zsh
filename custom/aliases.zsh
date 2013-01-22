@@ -83,6 +83,9 @@ alias -g G='|grep'
 alias -g T='|tail'
 alias -g H='|head'
 alias -g W='|wc -l'
+alias -g WL='|wc -l'
+alias -g WW='|wc -w'
+alias -g WC='|wc -c'
 alias -g S='|sort'
 alias -g C="|pbcopy"            # send to clipboard
 
