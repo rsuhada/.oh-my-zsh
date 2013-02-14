@@ -98,6 +98,18 @@ function snippet_hist_arg()
 zle -N snippet_hist_arg snippet_hist_arg
 bindkey "^[[20~" snippet_hist_arg
 
+# f10
+insert_leo () {
+LBUFFER+="leo \""
+RBUFFER+="\" H"
+}
+zle -N insert-leo insert_leo
+bindkey "^[[21~" insert-leo
+
+# f12
+bindkey -s "^[[24~" "pwd | perl -ne 'chomp and print' | pbcopy\n"
+# bindkey -s "^[;" "^Qls -rt -1 | tail -1\n"
+
 ######################################################################
 # misc functions
 
@@ -196,6 +208,13 @@ RBUFFER+=" &"
 zle -N insert-ds9 insert_ds9
 bindkey "^[9" insert-ds9
 
+insert_ds9_fp () {
+LBUFFER+="/Applications/SAOImage\ DS9.app/Contents/MacOS/ds9 "
+RBUFFER+=" &"
+}
+zle -N insert-ds9_fp insert_ds9_fp
+bindkey "^[0" insert-ds9_fp
+
 ######################################################################
 # underscore
 
@@ -226,16 +245,20 @@ bindkey -s "^[k" "^qls -a\n"
 bindkey -s "^[," "^qcd ..\n"
 bindkey -s "^[." "^qcd -\n"
 
-# f12
-bindkey -s "^[[24~" "pwd | perl -ne 'chomp and print' | pbcopy\n"
-# bindkey -s "^[;" "^Qls -rt -1 | tail -1\n"
-
 # insert most recent filename
 insert_recentfile () {
 LBUFFER+=" `ls -rt -1 | tail -1`"
 }
 zle -N insert-recentfile insert_recentfile
 bindkey "^[;" insert-recentfile
+
+# insert most lastbutone filename
+insert_lastbutonefile () {
+LBUFFER+=" `ls -rt -1 | tail -2 | head -1`"
+}
+zle -N insert-lastbutonefile insert_lastbutonefile
+bindkey "^[:" insert-lastbutonefile
+
 
 #####################################################################
 # rsync
@@ -259,25 +282,27 @@ bindkey "^[r" insert-rsync
 ######################################################################
 # fasd for quick access
 
-insert_fasd_file () {
-LBUFFER+="\`f "
-RBUFFER+=" \`"
-}
-zle -N insert-fasd_file insert_fasd_file
-bindkey "^[1" insert-fasd_file
+# not used at the moment
 
-insert_fasd_dir () {
-LBUFFER+="\`d "
-RBUFFER+=" \`"
-}
-zle -N insert-fasd_dir insert_fasd_dir
-bindkey "^[2" insert-fasd_dir
+# insert_fasd_file () {
+# LBUFFER+="\`f "
+# RBUFFER+=" \`"
+# }
+# zle -N insert-fasd_file insert_fasd_file
+# bindkey "^[1" insert-fasd_file
+
+# insert_fasd_dir () {
+# LBUFFER+="\`d "
+# RBUFFER+=" \`"
+# }
+# zle -N insert-fasd_dir insert_fasd_dir
+# bindkey "^[2" insert-fasd_dir
 
 
-# f5
-insert_leo () {
-LBUFFER+="leo \""
-RBUFFER+="\" H"
+# first f6, type name, c-e, M-6 for full find/xargs pipe
+insert_xarg () {
+LBUFFER+="-type f | xargs "  #  -print0
+RBUFFER+=""
 }
-zle -N insert-leo insert_leo
-bindkey "^[[21~" insert-leo
+zle -N insert-xarg insert_xarg
+bindkey "^[6" insert-xarg

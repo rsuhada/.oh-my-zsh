@@ -105,8 +105,10 @@ alias tdate='date +"%y%m%d"'
 # SAS 11.0.0
 alias sas11='export SAS_DIR=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; export SAS_PATH=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; source /Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803/sas-setup.sh; export SAS_MEMORY_MODEL=high; export SAS_CCFPATH=/Users/rs/calib/xmm/ccf/; export SAS_IMAGEVIEWER=ds9'
 
-# CIAO
-alias ciao='source /usr/ciao-4.2/bin/ciao.bash'
+# # CIAO
+# alias ciao='source /usr/ciao-4.2/bin/ciao.bash'
+
+export DS9_BINARY="/Users/rs/bin/ds9/ds9"
 
 # Software aliases
 alias ds9='/Applications/SAOImage\ DS9.app/Contents/MacOS/ds9'
