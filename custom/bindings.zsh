@@ -284,12 +284,12 @@ bindkey "^[r" insert-rsync
 
 # not used at the moment
 
-# insert_fasd_file () {
-# LBUFFER+="\`f "
-# RBUFFER+=" \`"
-# }
-# zle -N insert-fasd_file insert_fasd_file
-# bindkey "^[1" insert-fasd_file
+insert_fasd_file () {
+LBUFFER+="\`f "
+RBUFFER+=" \`"
+}
+zle -N insert-fasd_file insert_fasd_file
+bindkey "^f" insert-fasd_file
 
 # insert_fasd_dir () {
 # LBUFFER+="\`d "
