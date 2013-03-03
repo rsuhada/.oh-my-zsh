@@ -64,7 +64,7 @@ alias tgc='tar -cvvzf'
 alias sourcebash='source ~/.bashrc'
 alias cx='chmod 744'
 alias diff='diff -u'            # unified format (git like)
-alias dyff='/usr/bin/diff -y -W 116'           # 2 column: reroot to executable to avoid alias colision, 116 - half big screem
+alias difff='/usr/bin/diff -y -W 200'           # 2 column: reroot to executable to avoid alias colision, 116 - half big screem
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags' # use brewed version
 
 # git

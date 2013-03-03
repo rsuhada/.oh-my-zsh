@@ -99,12 +99,12 @@ zle -N snippet_hist_arg snippet_hist_arg
 bindkey "^[[20~" snippet_hist_arg
 
 # f10
-insert_leo () {
-LBUFFER+="leo \""
+insert_x-dict () {
+LBUFFER+="x-dict \""
 RBUFFER+="\" H"
 }
-zle -N insert-leo insert_leo
-bindkey "^[[21~" insert-leo
+zle -N insert-x-dict insert_x-dict
+bindkey "^[[21~" insert-x-dict
 
 # f12
 bindkey -s "^[[24~" "pwd | perl -ne 'chomp and print' | pbcopy\n"
