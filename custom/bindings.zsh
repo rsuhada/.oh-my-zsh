@@ -316,4 +316,4 @@ LBUFFER+=" &"
 zle accept-line
 }
 zle -N insert-run_detach insert_run_detach
-bindkey "^j" insert-run_detach
+bindkey "^n" insert-run_detach
