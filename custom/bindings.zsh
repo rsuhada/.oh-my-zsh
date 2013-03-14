@@ -208,12 +208,12 @@ RBUFFER+=" &"
 zle -N insert-ds9 insert_ds9
 bindkey "^[9" insert-ds9
 
-insert_ds9_fp () {
-LBUFFER+="/Applications/SAOImage\ DS9.app/Contents/MacOS/ds9 "
-RBUFFER+=" &"
-}
-zle -N insert-ds9_fp insert_ds9_fp
-bindkey "^[0" insert-ds9_fp
+# insert_ds9_fp () {
+# LBUFFER+="/Applications/SAOImage\ DS9.app/Contents/MacOS/ds9 "
+# RBUFFER+=" &"
+# }
+# zle -N insert-ds9_fp insert_ds9_fp
+# bindkey "^[0" insert-ds9_fp
 
 ######################################################################
 # underscore
@@ -310,10 +310,19 @@ bindkey "^[6" insert-xarg
 ######################################################################
 # add & and run detached
 
-insert_run_detach () {
-zle end-of-line
-LBUFFER+=" &"
-zle accept-line
+insert_tpca () {
+LBUFFER+="tpca "
+RBUFFER+=" &"
 }
-zle -N insert-run_detach insert_run_detach
-bindkey "^n" insert-run_detach
+zle -N insert-tpca insert_tpca
+bindkey "^u" insert-tpca
+
+######################################################################
+# add & and run detached
+
+insert_tpc () {
+LBUFFER+="tpc "
+RBUFFER+=" &"
+}
+zle -N insert-tpc insert_tpc
+bindkey "^y" insert-tpc
