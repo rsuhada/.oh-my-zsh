@@ -259,3 +259,6 @@ alias initquant='source /Users/rs/data1/sw/QSTK/localconfig.sh'
 # timing, cron, at
 
 alias clearatq='for i in `atq | cut -f1` ; do atrm $i; done'
+
+######################################################################
+# misc
