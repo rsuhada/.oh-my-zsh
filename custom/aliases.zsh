@@ -260,5 +260,13 @@ alias initquant='source /Users/rs/data1/sw/QSTK/localconfig.sh'
 
 alias clearatq='for i in `atq | cut -f1` ; do atrm $i; done'
 
+
+######################################################################
+# nltk
+
+export NLTK_DATA=/Users/rs/nltk_data/
+
 ######################################################################
 # misc
+
+
