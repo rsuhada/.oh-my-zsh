@@ -176,8 +176,8 @@ export HISTSIZE=50000
 
 
 # VO
-alias tpc='java -jar ~/data1/sw/topcat-3.8/topcat-full.jar'
-alias tpca='java -jar ~/data1/sw/topcat-3.8/topcat-full.jar -f ascii'
+alias tpc='java -jar ~/data1/sw/topcat-current/topcat-full.jar'
+alias tpca='java -jar ~/data1/sw/topcat-current/topcat-full.jar -f ascii'
 alias stilts='java -jar ~/data1/sw/stilts-2.3.1/stilts.jar'
 alias stl='java -jar ~/data1/sw/stilts-2.3.1/stilts.jar'
 
