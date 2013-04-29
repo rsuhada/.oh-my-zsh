@@ -210,6 +210,12 @@ alias j='fasd_cd -d'     # cd, same functionality as j in autojump
 alias jj='fasd_cd -d -i' # cd with interactive selection
 
 ######################################################################
+# external disk
+
+# unmount or if fails, force unmount
+alias unm='diskutil unmount /Volumes/TMbackup || (diskutil unmount force /Volumes/TMbackup)'
+
+######################################################################
 # private stuff
 
 # CVS stuff

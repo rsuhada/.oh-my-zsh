@@ -57,10 +57,11 @@ RBUFFER+="\" ./"
 zle -N insert-rgrep insert_rgrep
 bindkey "^[[15~" insert-rgrep
 
+
 # f6
 insert_find () {
 LBUFFER+="find . -iname \\*"
-RBUFFER+="\\*"
+RBUFFER+="\\* | while read i; do echo \$i ; done"
 }
 zle -N insert-find insert_find
 bindkey "^[[17~" insert-find
