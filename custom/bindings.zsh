@@ -281,6 +281,17 @@ bindkey "^[r" insert-rsync
 
 
 ######################################################################
+# boom
+
+insert_boom () {
+LBUFFER+="boom main "
+RBUFFER+=""
+}
+zle -N insert-boom insert_boom
+bindkey "^b" insert-boom
+
+
+######################################################################
 # fasd for quick access
 
 # not used at the moment

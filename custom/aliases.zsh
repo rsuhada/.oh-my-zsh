@@ -2,7 +2,7 @@
 # taken from bash, needs cleanup but works
 
 # Search Path additions
-export PATH=~/bin:/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:/Users/rs/data1/sw/dataProductivityToolkit:$PATH
+export PATH=~/bin:/utils/ds9/:/utils/p2pp/bin/:/utils/skycat/:~/data1/sw/zhtools/bin:~/data1/sw/misc:~/data1/sw/scripts:~/data1/sw/esaspi:~/data1/sw/esaspi/quick-spec:~/data1/sw/esaspi/utils:~/data1/sw/esaspi/iter-spec:~/data1/sw/kapi:~/data1/sw/root-5.30/bin:/Users/rs/data1/sw/dataProductivityToolkit:/Users/rs/.gem/ruby/1.8/bin/:$PATH
 export PATH="$PATH:/usr/local/bin/:~/data1/sw/scripts/:/usr/texbin/"
 
 # for ports
@@ -66,7 +66,7 @@ alias cx='chmod 744'
 alias diff='diff -u'            # unified format (git like)
 alias difff='/usr/bin/diff -y -W 200'           # 2 column: reroot to executable to avoid alias colision, 116 - half big screem
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags' # use brewed version
-
+alias b='boom'
 # git
 alias ga='git add .'
 alias gst='git status'
