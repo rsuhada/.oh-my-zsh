@@ -197,7 +197,7 @@ insert_open () {
 LBUFFER+="open "
 }
 zle -N insert-open insert_open
-bindkey "^[o" insert-open
+bindkey "^[q" insert-open
 
 ######################################################################
 # ds9

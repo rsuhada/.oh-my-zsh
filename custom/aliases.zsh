@@ -101,6 +101,7 @@ alias a2ps_1='a2ps -l120 --columns=1'
 
 # bash mods
 alias tdate='date +"%y%m%d"'
+alias ddate='date +"%y-%m-%d %H:%M:%S"'
 
 # SAS 11.0.0
 alias sas11='export SAS_DIR=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; export SAS_PATH=/Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803; source /Users/rs/data1/sw/sas-11.0.0/xmmsas_20110223_1803/sas-setup.sh; export SAS_MEMORY_MODEL=high; export SAS_CCFPATH=/Users/rs/calib/xmm/ccf/; export SAS_IMAGEVIEWER=ds9'
