@@ -107,9 +107,23 @@ RBUFFER+="\" H"
 zle -N insert-x-dict insert_x-dict
 bindkey "^[[21~" insert-x-dict
 
+# f11
+function snippet_for()
+{
+    LBUFFER+="for i in "
+    RBUFFER=" ; do echo \$i; done $RBUFFER"
+}
+zle -N snippet_for snippet_for
+bindkey "^[[23~" snippet_for
+
+# FIXME!!
+
+
 # f12
 bindkey -s "^[[24~" "pwd | perl -ne 'chomp and print' | pbcopy\n"
 # bindkey -s "^[;" "^Qls -rt -1 | tail -1\n"
+
+
 
 ######################################################################
 # misc functions
