@@ -124,7 +124,6 @@ bindkey -s "^[[24~" "pwd | perl -ne 'chomp and print' | pbcopy\n"
 # bindkey -s "^[;" "^Qls -rt -1 | tail -1\n"
 
 
-
 ######################################################################
 # misc functions
 
@@ -274,7 +273,6 @@ LBUFFER+=" `ls -rt -1 | tail -2 | head -1`"
 zle -N insert-lastbutonefile insert_lastbutonefile
 bindkey "^[:" insert-lastbutonefile
 
-
 #####################################################################
 # rsync
 
@@ -364,3 +362,29 @@ zle accept-line
 }
 zle -N insert-run_detach insert_run_detach
 bindkey "^n" insert-run_detach
+
+######################################################################
+# nummerals
+
+# 0,1,2,3 are bound to window managaemet in tmux
+
+# 4
+
+# bindkey -s "^[4" "path=`pwd` ; file=`ls -rt | tail -1 | head -1` : echo ${path}/${file} | perl -ne 'chomp and print' | pbcopy\n"
+bindkey -s "^[\`" "/Users/rs/data1/sw/scripts/clipmostrecent\n" # maybe remove later
+bindkey -s "^[4" "/Users/rs/data1/sw/scripts/clipmostrecent\n"
+
+# 5
+
+# bindkey -s "^[5" "pathpwd=`pwd` ; file=`ls -rt | tail -2 | head -1` : echo `pwd`/`ls -rt | tail -2 | head -1` | perl -ne 'chomp and print' | pbcopy\n"
+bindkey -s "^[5" "/Users/rs/data1/sw/scripts/clipmostrecent 2\n"
+
+
+# 9
+insert_ds9 () {
+LBUFFER+="ds9 "
+RBUFFER+=" &"
+}
+zle -N insert-ds9 insert_ds9
+bindkey "^[9" insert-ds9
+
