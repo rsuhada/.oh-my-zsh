@@ -11,10 +11,10 @@ bindkey '\eh' backward-kill-word
 
 # my emacs motion
 
-bindkey '\ei' up-line-or-history
-bindkey '\ek' down-line-or-history
-bindkey '\ej' backward-char
-bindkey '\el' forward-char
+bindkey '\eu' up-line-or-history
+bindkey '\ee' down-line-or-history
+bindkey '\en' backward-char
+bindkey '\ei' forward-char
 
 ######################################################################
 # function keys
@@ -142,7 +142,7 @@ bindkey "^[s" insert-sudo
 # jump
 
 insert_jump () {
-LBUFFER+="j "
+LBUFFER+="n "
 }
 zle -N insert-jump insert_jump
 bindkey "^[n" insert-jump
@@ -237,7 +237,7 @@ LBUFFER+="_"
 # RBUFFER+=" &"
 }
 zle -N insert-underscore insert_underscore
-bindkey "^[u" insert-underscore
+bindkey "^[l" insert-underscore
 
 ######################################################################
 # lrt
@@ -253,9 +253,9 @@ bindkey "^[u" insert-underscore
 # This assumes ^q is bound to the editor command push-line.  You can
 # remove the ^q if you only want to use this on an empty command line.
 
-bindkey -s "^[i" "^qls -lrth\n"
-bindkey -s "^[I" "^qls -lrtha\n"
-bindkey -s "^[k" "^qls -a\n"
+bindkey -s "^[u" "^qls -lrth\n"
+bindkey -s "^[U" "^qls -lrtha\n"
+bindkey -s "^[e" "^qls -a\n"
 bindkey -s "^[," "^qcd ..\n"
 bindkey -s "^[." "^qcd -\n"
 
@@ -264,14 +264,14 @@ insert_recentfile () {
 LBUFFER+=" `ls -rt -1 | tail -1`"
 }
 zle -N insert-recentfile insert_recentfile
-bindkey "^[;" insert-recentfile
+bindkey "^[o" insert-recentfile
 
 # insert most lastbutone filename
 insert_lastbutonefile () {
 LBUFFER+=" `ls -rt -1 | tail -2 | head -1`"
 }
 zle -N insert-lastbutonefile insert_lastbutonefile
-bindkey "^[:" insert-lastbutonefile
+bindkey "^[O" insert-lastbutonefile
 
 #####################################################################
 # rsync
@@ -339,7 +339,7 @@ LBUFFER+="tpca "
 RBUFFER+=" &"
 }
 zle -N insert-tpca insert_tpca
-bindkey "^u" insert-tpca
+bindkey "^l" insert-tpca
 
 ######################################################################
 # topcat
@@ -361,7 +361,7 @@ LBUFFER+=" &"
 zle accept-line
 }
 zle -N insert-run_detach insert_run_detach
-bindkey "^n" insert-run_detach
+bindkey "^k" insert-run_detach
 
 ######################################################################
 # nummerals
@@ -387,4 +387,3 @@ RBUFFER+=" &"
 }
 zle -N insert-ds9 insert_ds9
 bindkey "^[9" insert-ds9
-

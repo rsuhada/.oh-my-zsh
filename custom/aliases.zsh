@@ -209,7 +209,7 @@ test -r /sw/bin/init.sh && . /sw/bin/init.sh
 ######################################################################
 # fasd
 
-alias j='fasd_cd -d'     # cd, same functionality as j in autojump
+alias n='fasd_cd -d'     # cd, same functionality as j in autojump
 alias jj='fasd_cd -d -i' # cd with interactive selection
 
 ######################################################################
