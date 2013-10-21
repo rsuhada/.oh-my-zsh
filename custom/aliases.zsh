@@ -130,6 +130,8 @@ alias ip27='/opt/local/bin/ipython-2.7'
 alias diffpdf='/Applications/diffpdf.app/Contents/MacOS/diffpdf'
 alias kdiff3='/Applications/kdiff3.app/Contents/MacOS/kdiff3'
 
+alias briss=' java -jar ~/data1/sw/briss-0.9/briss-0.9.jar '
+
 # python
 # export PYTHONPATH=/System/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages/:/Library/Python/2.6/site-packages/:/Users/rs/.emacs.d/plugins/ropemacs/:/Users/rs/data1/sw/Pymacs/
 export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:/Users/rs/data1/sw/pythonlibs/rs:/Users/rs/data1/sw/kapi:/Users/rs/data1/sw/esaspi/py/:/Users/rs/data1/sw/esaspi/sb/:/Users/rs/data1/sw/esaspi/py/test/:/Users/rs/data1/sw/esaspi/sb/
@@ -275,5 +277,3 @@ export NLTK_DATA=/Users/rs/nltk_data/
 
 ######################################################################
 # misc
-
-
