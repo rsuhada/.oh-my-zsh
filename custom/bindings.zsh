@@ -2,7 +2,7 @@
 # bindings
 ######################################################################
 
-######################################################################
+######################################################ie############
 # general
 
 bindkey -me 2>/dev/null      # use emacs bindgs + meta
@@ -145,7 +145,7 @@ insert_jump () {
 LBUFFER+="n "
 }
 zle -N insert-jump insert_jump
-bindkey "^[n" insert-jump
+bindkey "^[j" insert-jump
 
 ######################################################################
 # echo
@@ -201,7 +201,7 @@ insert_mkdir () {
 LBUFFER+="mkdir -p "
 }
 zle -N insert-mkdir insert_mkdir
-bindkey "^[m" insert-mkdir
+# bindkey "^[m" insert-mkdir
 
 ######################################################################
 # open
@@ -361,7 +361,7 @@ LBUFFER+=" &"
 zle accept-line
 }
 zle -N insert-run_detach insert_run_detach
-bindkey "^k" insert-run_detach
+bindkey "^[m" insert-run_detach
 
 ######################################################################
 # nummerals
